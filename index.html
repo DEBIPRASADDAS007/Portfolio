@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">My Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm <span>Debiprasad Das</span></h1>
+                <span id="element"></span>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about col-1">
+                    <img src="images/Debii.png" alt="Debiprasad Das">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I have done my Graduation in Mechanical Engineering with a keen interest in Programming like
+                        Python, SQL, and Web-Technology. I want to pursue my career in the Software Field and want to
+                        grow in this industry. Since I started learning how to code, I found this is highly useful in
+                        creating something new, and I am a forward-looking person who wishes to work for an organization
+                        that provides me with the opportunity to improve my skills and knowledge.</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Python</span><br>Python Fullstack</li>
+                            <li><span>SQL</span><br>(DDL, DML, DCL, DQL & TCL)</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-23</span><br>B Tech - Govt College of Engineering Kalahandi</li>
+                            <li><span>2017-2020</span><br>Diploma - CIPET, CSTS, Bhubaneswar</li>
+                            <li><span>2015-17</span><br>Intermediate Education - Maharishi College of Natural Law</li>
+                            <li><span>2015</span><br>Matriculation Education - S.C.B.P, Nanpur, Cuttack</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">My Services</h1>
+            <div class="services-list">
+                <div>
+                    <h2>Python Development</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, autem perferendis! Voluptatem
+                        aliquam ipsam harum voluptatibus, ad nam! Commodi, inventore.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div>
+                    <h2>Web Development</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, autem perferendis! Voluptatem
+                        aliquam ipsam harum voluptatibus, ad nam! Commodi, inventore.</p>
+                    <a href="#">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-paper-plane"></i> debiprasaddas712@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i> 7504069300</p>
+                    <div class="social-icon">
+                        <a href="https://www.linkedin.com/in/debiprasad-das0126"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://github.com/dasdebi7"><i class="fab fa-github"></i></a>
+                        <a href="https://twitter.com/DebiprasadDass"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <a href="Debi_CV_Me.pdf" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (var tablink of tablinks) {
+                tablink.classList.remove("active-link");
+            }
+            for (var tabcontent of tabcontents) {
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- Setup and start animation! -->
+  <script>
+    var typed = new Typed('#element', {
+      strings: ['Python Fullstack Developer', 'Web Developer', 'Video Editor'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+
+</html>
